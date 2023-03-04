@@ -1,13 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(32, 202, 224);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+.quiz{
+  width: 600px;
+  height: 400px;
+  background-color: aliceblue;
+  border: 6px solid rgb(255, 180, 180);
+  border-radius: 22px;
+  padding: 12px 17px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-bar{
+  width: 100%;
+  height: 10px;
+  background-color: rgb(70, 69, 69);
+  border-radius: 10px;
+}
+
+.bar{
+  max-width: 100%;
+  background-color: rgb(0, 255, 38);
+  height: 100%;
+  border-radius: 10px;
+  transition: .2s linear;
+}
+
+.questions_count{
+  width: 100%;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.question_title{
+  text-align: center;
+  width: 100%;
+  font-size: 25px;
+  margin-top: 20px;
+}
+
+ul,li{
+  list-style: none;
+}
+
+ul{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+ul li{
+  width: 100%;
+  background-color: antiquewhite;
+  text-align: center;
+  padding: 15px 0;
+  border-radius: 15px;
+  cursor: pointer;
+  border: 1px solid;
+  transition: .2s linear;
+}
+
+ul li:hover{
+  -webkit-transform: scale(1.030);
+  transform: scale(1.030);
+  background-color:aquamarine;
+}
+
+
+
+/* <>
+<img src={firework} alt="fireworks" />
+<h2 className='result_percent'>50%</h2>
+<h2 className='result_text'>You answered 5 out of 10 questions correctly</h2>
+<a href='/'>
+  <button>Try again</button>
+</a>
+</> */
+
+.quiz img{
+  width: 200px;
+}
+
+.result_percent{
+  color:rgb(4, 4, 202);
+  font-size: 40px;
+}
+
+.result_text{
+  text-align: center;
+}
+
+.quiz a button{
+  border-radius: 5px;
+  padding: 12px 18px;
+  color: #fff;
+  font-size: 20px;
+  background-color: #000;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: .2s linear;
+}
+
+.quiz a button:hover{
+  opacity: .6;
 }
